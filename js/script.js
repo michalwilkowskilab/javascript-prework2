@@ -29,13 +29,6 @@ function getMoveName(argMoveId) {
   }
 }
 
-playerMove = argButtonName;
-console.log('ruch gracza to: ' + playerMove);
-randomNumber = Math.floor(Math.random() * 3 + 1);
-console.log('wylosowana liczba to: ' + randomNumber);
-computerMove = getMoveName(randomNumber);
-console.log('ruch komputera to: ' + computerMove);
-displayResult(playerMove, computerMove);
 
 /**
  * Describe this function...
@@ -56,6 +49,13 @@ function displayResult(argPlayerMove, argComputerMove) {
   printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
 }
 
+playerMove = argButtonName;
+console.log('ruch gracza to: ' + playerMove);
+randomNumber = Math.floor(Math.random() * 3 + 1);
+console.log('wylosowana liczba to: ' + randomNumber);
+computerMove = getMoveName(randomNumber);
+console.log('ruch komputera to: ' + computerMove);
+displayResult(playerMove, computerMove);
 
 buttonRock.addEventListener('click', function(){ buttonClicked('Guzik kamień'); });
 buttonPaper.addEventListener('click', function(){ buttonClicked('Guzik papier'); });
