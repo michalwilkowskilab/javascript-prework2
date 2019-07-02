@@ -1,4 +1,3 @@
-
 const buttonScissors = document.getElementById('button-scissors');
 const buttonPaper = document.getElementById('button-paper');
 const buttonRock = document.getElementById('button-rock');
@@ -51,12 +50,12 @@ function displayResult(argPlayerMove, argComputerMove) {
 
 
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
-playerMove = getMoveName(playerInput);
-console.log('ruch gracza to: ' + playerMove);
+const playerMove = getMoveName(playerInput);
+console.log('ruch gracza to: ' + argPlayerMove);
 const randomNumber = Math.floor(Math.random() * 3 + 1);
 console.log('wylosowana liczba to: ' + randomNumber);
 computerMove = getMoveName(randomNumber);
-console.log('ruch komputera to: ' + computerMove);
+console.log('ruch komputera to: ' + argComputerMove);
 displayResult(playerMove, computerMove);
 
 buttonRock.addEventListener('click', function(){ buttonClicked('Guzik kamień'); });
